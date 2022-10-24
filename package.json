@@ -1,0 +1,23 @@
+{
+  "name": "observable",
+  "version": "1.0.0",
+  "description": "An observable pattern implementation in nodejs",
+  "main": "Observable.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hetrodoo/observable.git"
+  },
+  "keywords": [
+    "observable",
+    "watch",
+    "listen",
+    "subscribe",
+    "observer"
+  ],
+  "author": "hetrodo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hetrodoo/observable/issues"
+  },
+  "homepage": "https://github.com/hetrodoo/observable#readme"
+}
