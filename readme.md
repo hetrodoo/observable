@@ -1,4 +1,5 @@
 Observable is an observable pattern implementation in nodejs
+(Note that when observing objects only the root properties are reactive)
 
 ```js
 const Observable = require("Observable");
