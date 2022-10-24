@@ -1,5 +1,5 @@
 {
-  "name": "observable",
+  "name": "@hetrodo/observable",
   "version": "1.0.0",
   "description": "An observable pattern implementation in nodejs",
   "main": "Observable.js",
