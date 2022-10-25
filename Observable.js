@@ -4,6 +4,10 @@ class Observable {
     #listeners = [];
 
     constructor(value) {
+        this.#createBindings(value);
+    }
+
+    #createBindings(value) {
         this.#internalValue = value;
         this.#value = value;
 
@@ -45,6 +49,7 @@ class Observable {
     set value(newValue) {
         this.#value = newValue;
         this.#dispatch(this.#value);
+        this.#createBindings(newValue);
     }
 
     #dispatch(value) {
