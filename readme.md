@@ -1,25 +1,36 @@
-Observable is an observable pattern implementation in nodejs
-(Note that when observing objects only the root properties are reactive)
+[![Observable Logo](https://storage.googleapis.com/hetrodo-public/Observable.png)](https://www.npmjs.com/package/@hetrodo/observable)
+
+[![Downloads](https://img.shields.io/npm/dm/@hetrodo/observable?label=Downloads)](https://www.npmjs.com/package/@hetrodo/observable)
+
+Observable is a simple and lightweight implementation of the observable pattern in nodejs, it fires events when
+properties are changed.
+
+But note that only the root properties of objects are observed.
+
+## Supported types
+
+* `Object`
+* `Array`
+* `Primitives` (string, number, boolean, null, undefined)
+
+## Installation
+
+```bash
+npm install @hetrodo/observable
+```
+
+## Usage
 
 ```js
-const Observable = require("Observable");
+const Observable = require("@hetrodo/observable");
 
-const primitives = new Observable(0);
-primitives.subscribe(console.log);
+const counter = new Observable(0); //Create a new observable with the initial value of 0
 
-const objects = new Observable({ count: 0 });
-objects.subscribe(console.log);
-
-const lists = new Observable([]);
-lists.subscribe(console.log);
-
-let i = 0;
+counter.subscribe((value) => {
+    console.log(value); //Subscribe to the observable, this will print the value of the observable every time it changes
+});
 
 setInterval(() => {
-    primitives.value++;
-    objects.value.count++;
-    lists.value.push(i);
-
-    i++;
-}, 250);
+    counter.value++; //Increment the value of the observable every second
+}, 1000);
 ```
